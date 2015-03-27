@@ -46,9 +46,9 @@ mysql_delete_anonymous_user_{{ host }}:
     - require:
       - service: mysqld
       - pkg: mysql_python
-      {%- if mysql_root_password %}
+      {% if mysql_root_password %}
       - cmd: mysql_root_password
-      {%- endif %}
+      {% endif %}
 {% endfor %}
 {% endif %}
 {% endif %}
